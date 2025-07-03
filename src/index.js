@@ -7,7 +7,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://frontend-order-tracker.vercel.app']
+  origin: ['http://localhost:3000', 'https://frontend-order-tracker-d8xe.vercel.app', 'https://frontend-order-tracker-d8x-git-9efca0-danielamichelles-projects.vercel.app', 'https://frontend-order-tracker-d8xe-o5ph14cvt-danielamichelles-projects.vercel.app/']
 }));
 app.use(express.json());
 
