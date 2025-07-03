@@ -6,7 +6,9 @@ require('dotenv').config();
 const app = express();
 const prisma = new PrismaClient();
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // ⚠️ para producción se recomienda poner el dominio del frontend, no '*'
+}));
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
