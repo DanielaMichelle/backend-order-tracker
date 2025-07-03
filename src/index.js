@@ -7,7 +7,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(cors({
-  origin: '*', // ⚠️ para producción se recomienda poner el dominio del frontend, no '*'
+  origin: ['http://localhost:3000', 'https://frontend-order-tracker.vercel.app']
 }));
 app.use(express.json());
 
