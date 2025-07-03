@@ -6,9 +6,15 @@ require('dotenv').config();
 const app = express();
 const prisma = new PrismaClient();
 
+// app.use(cors({
+//   origin: ['https://frontend-order-tracker-d8xe.vercel.app/']
+// })); 
+
 app.use(cors({
-  origin: ['https://ordersdemo.netlify.app/', 'https://frontend-order-tracker-d8xe.vercel.app', 'https://frontend-order-tracker-d8x-git-9efca0-danielamichelles-projects.vercel.app', 'https://frontend-order-tracker-d8xe-o5ph14cvt-danielamichelles-projects.vercel.app/']
-})); 
+  origin: 'https://frontend-order-tracker-d8xe.vercel.app/', // URL generada por Vercel
+  credentials: false
+}));
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
