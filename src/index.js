@@ -6,12 +6,12 @@ require('dotenv').config();
 const app = express();
 const prisma = new PrismaClient();
 
-// app.use(cors({
+// app.use(cors({ 
 //   origin: ['https://frontend-order-tracker-d8xe.vercel.app/']
 // })); 
 
-app.use(cors({
-  origin: 'https://frontend-order-tracker-d8xe.vercel.app/', // URL generada por Vercel
+app.use(cors({ 
+  origin: 'https://frontend-order-tracker.vercel.app', // URL generada por Vercel
   credentials: false
 }));
 
